@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 920px;
+}
+
+.wrapper2 {
+  margin: 0 auto;
+  max-width: 1130px;
+}
+
+/* slider  */
+
+.MuiSlider-track {
+  color: #008849;
+  padding: 5px;
+}
+
+.MuiSlider-rail {
+  color: #eaf0db;
+  padding: 5px;
+}
+
+.MuiSlider-thumb {
+  color: #008849;
+  padding: 15px;
+}
+
+/* background image */
+
+.loanImage {
+  background-image: url("src/assets/greenBg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.opinionImage {
+  display: flex;
+  background-image: url("src/assets/circle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footerImage {
+  background-image: url("src/assets/darkGreenBg.svg");
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(#eaf0dc 70%, #efeff3);
+}
+
+.modalBackground {
+  background: rgba(213, 220, 226, 0.8);
+}
+
+/* input / textarea / placeholder */
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.nameInput::placeholder {
+  color: #008849;
+  font-weight: bold;
+}
+
+.nameInput:-internal-autofill-selected {
+  box-shadow: 0px 1000px #ffffff inset;
+}
+
+.messageTextArea::placeholder {
+  color: #008849;
+  font-weight: bold;
+}
+
+.firstStepInput:-internal-autofill-selected {
+  -webkit-text-fill-color: #191b19;
+  box-shadow: 0px 1000px #fbfbfc inset;
+}
+
+.firstStepInput:focus {
+  box-shadow: 0 0 2pt 0pt #2dab5a;
+  outline-width: 0px;
+  box-shadow: 0px 1000px #fbfbfc inset;
+}
+
+/* checkbox - first step */
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+input[type="checkbox"]:before {
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+input[type="checkbox"]:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #008849;
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+/* date picker  */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: #fbfbfc;
+  border-radius: 50%;
+  padding: 6px;
+  height: 14px;
+  width: 14px;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  background-color: #dadde0;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+/* radio - fifth step */
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fbfbfc;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #727472;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  position: relative;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+input[type="radio"]:checked {
+  appearance: none;
+  background-color: #008849;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #727472;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #fbfbfc;
+  transition: transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked {
+  border-color: #008849;
+}
+
+input[type="radio"]:checked::before {
+  background-color: #fbfbfc;
+  border: 1px solid #008849;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* select  */
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fbfbfc;
+  color: #9ca3af;
+}
+
+select option:disabled {
+  color: #9ca3af;
+}
+
+select:invalid {
+  color: #9ca3af;
+}
+
+select:valid {
+  color: #191b19;
+}
+
+select:focus {
+  color: #191b19;
+}
